@@ -219,7 +219,8 @@ You can start creating new spans, and they should be correctly added to the expo
 
 Next.js automatically instruments several spans for you to provide useful insights into your application's performance.
 
-Attributes on spans follow [OpenTelemetry semantic conventions](https://opentelemetry.io/docs/reference/specification/trace/semantic_conventions/). We also add some custom attributes under the `next` namespace:
+Attributes on spans follow [OpenTelemetry semantic conventions](https://opentelemetry.io/docs/concepts/semantic-conventions/). We also add some custom attributes under the `next` namespace:
+
 
 - `next.span_name` - duplicates span name
 - `next.span_type` - each span type has a unique identifier
@@ -237,10 +238,10 @@ This span represents the root span for each incoming request to your Next.js app
 
 Attributes:
 
-- [Common HTTP attributes](https://opentelemetry.io/docs/reference/specification/trace/semantic_conventions/http/#common-attributes)
+- [Common HTTP attributes](https://opentelemetry.io/docs/specs/semconv/http/http-metrics/)
   - `http.method`
   - `http.status_code`
-- [Server HTTP attributes](https://opentelemetry.io/docs/reference/specification/trace/semantic_conventions/http/#http-server-semantic-conventions)
+- [Server HTTP attributes](https://opentelemetry.io/docs/specs/semconv/http/)
   - `http.route`
   - `http.target`
 - `next.span_name`
